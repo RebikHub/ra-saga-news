@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { createEpicMiddleware } from "redux-observable";
+import createSagaMiddleware from "redux-saga";
 import { newsReducer } from "./slicesList";
 import saga from "../sagas/index";
 
-const sagaMiddleware = createEpicMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: newsReducer,

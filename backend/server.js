@@ -17,14 +17,14 @@ const router = new Router();
 function fortune(ctx, body = null, status = 200) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            // if (Math.random() > 0.3) {
+            if (Math.random() > 0.3) {
                 ctx.response.status = status;
                 ctx.response.body = body;
                 resolve();
                 return;
-            // }
+            }
 
-            // reject(new Error('Something bad happened'));
+            reject(new Error('Something bad happened'));
         }, 3 * 1000);
     })
 }

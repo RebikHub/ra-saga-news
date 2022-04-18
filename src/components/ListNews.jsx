@@ -10,7 +10,7 @@ export default function ListNews({news, newsGet, loading}) {
   useEffect(() => {
     setList(news)
   }, [news])
-  console.log(news);
+
   function getMore() {
     dispatch(fetchGetMoreRequest(news[news.length - 1].id));
   }
